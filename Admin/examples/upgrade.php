@@ -103,6 +103,7 @@
                 </div>
             </nav>
             <!-- End Navbar -->
+            <!-- 
             <div class="content">
                 <div class="container-fluid">
                     <div class="content">
@@ -177,6 +178,61 @@
 
                     </div>
                 </div>
+                -->
+                <div class="wrapper">
+         <div class="title">
+          <!-- <img src="https://99designs-acquisition-frontend.imgix.net/serverless/images/categoryPage/hero/logo-design/04-artsigma.jpg" height="100px" width="100px"> -->
+            Sign Up Page
+
+         </div>
+
+         <form action="#">
+           <div class="field">
+              <input type="text" required>
+              <label>Username</label>
+           </div>
+           <div class="field">
+              <input type="password" required>
+              <label>Password</label>
+           </div>
+           <div class="field">
+              <input type="text" required>
+              <label>First Name</label>
+           </div>
+           <div class="field">
+              <input type="text" required>
+              <label>Last Name</label>
+           </div>
+           <div class="field">
+              <input type="text" required>
+              <label>Email Address</label>
+           </div>
+
+           <div class="field">
+              <input type="tel" required>
+              <label>City</label>
+           </div>
+           <div class="field">
+              <input type="text" required>
+              <label>About</label>
+           </div>
+
+
+
+
+
+          <!--  <div class="content">
+               <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+               </div>
+               <div class="pass-link">
+                  <a href="#">Forgot password?</a>
+               </div>
+            </div> -->
+            <div class="field">
+               <input type="submit" value="Create Account">
+            </div>
             </div>
         </div>
 
