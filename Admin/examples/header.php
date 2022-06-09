@@ -25,7 +25,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./table.php">
+                        <a class="nav-link" href="./users.php">
                             <i class="nc-icon nc-notes"></i>
                             <p>Users</p>
                         </a>
@@ -37,15 +37,15 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./icons.php">
+                        <a class="nav-link" href="./admins.php">
                             <i class="nc-icon nc-atom"></i>
-                            <p>Icons</p>
+                            <p>List of admins</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./maps.php">
+                        <a class="nav-link" href="./approvals.php">
                             <i class="nc-icon nc-pin-3"></i>
-                            <p>Maps</p>
+                            <p>pending approvals</p>
                         </a>
                     </li>
                     <li>
