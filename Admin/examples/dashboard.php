@@ -1,4 +1,4 @@
-<!--
+<!-- 
 =========================================================
  Light Bootstrap Dashboard - v2.0.1
 =========================================================
@@ -13,6 +13,7 @@
 
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -34,75 +35,12 @@
 
 <body>
     <div class="wrapper">
-        <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text">
-                        Creative Tim
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li>
-                        <a class="nav-link" href="dashboard.html">
-                            <i class="nc-icon nc-chart-pie-35"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./user.html">
-                            <i class="nc-icon nc-circle-09"></i>
-                            <p>User Profile</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./table.html">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>Users</p>
-                        </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./typography.html">
-                            <i class="nc-icon nc-paper-2"></i>
-                            <p>Typography</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./icons.html">
-                            <i class="nc-icon nc-atom"></i>
-                            <p>Icons</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./maps.html">
-                            <i class="nc-icon nc-pin-3"></i>
-                            <p>Maps</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./notifications.html">
-                            <i class="nc-icon nc-bell-55"></i>
-                            <p>Notifications</p>
-                        </a>
-                    </li>
-                    <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="upgrade.html">
-                            <i class="nc-icon nc-alien-33"></i>
-                            <p>Add New Admin</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+       <?php include('header.php')?>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Typography </a>
+                    <a class="navbar-brand" href="#pablo"> Dashboard </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -116,7 +54,7 @@
                                     <span class="d-lg-none">Dashboard</span>
                                 </a>
                             </li>
-                            <li class="dropdown nav-item">
+                            <!-- <li class="dropdown nav-item">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                     <i class="nc-icon nc-planet"></i>
                                     <span class="notification">5</span>
@@ -129,7 +67,7 @@
                                     <a class="dropdown-item" href="#">Notification 4</a>
                                     <a class="dropdown-item" href="#">Another notification</a>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nc-icon nc-zoom-split"></i>
@@ -169,99 +107,73 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Light Bootstrap Table Heading</h4>
-                                    <p class="card-category">Created using Montserrat Font Family</p>
+                        <div class="col-md-4">
+                            <div class="card " style="width:300px ;">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Number of users loged-in</h4>
+                                    <!-- style="background-color:#b4f3ff; border-radius:4px;" -->
+                                    <!-- <p class="card-category">Last Campaign Performance</p> -->
+                                </div>
+                                <div class="card-body ">
+
+                                    <p>fetch number</p>
+                                     <!-- <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div> -->
+                                    <div class="legend">
+
+                                    </div> 
+                                       <hr>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card ">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Number of Hotels/Wills Registered</h4>
+                                    <p class="card-category">24 Hours performance</p>
                                 </div>
                                 <div class="card-body">
-                                    <div class="typography-line">
-                                        <h1>
-                                            <span>Header 1</span>The Life of LB Dashboard </h1>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h2>
-                                            <span>Header 2</span>The Life of Light Bootstrap Dashboard </h2>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h3>
-                                            <span>Header 3</span>The Life of Light Bootstrap Dashboard </h3>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h4>
-                                            <span>Header 4</span>The Life of Light Bootstrap Dashboard </h4>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h5>
-                                            <span>Header 5</span>The Life of Light Bootstrap Dashboard </h5>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h6>
-                                            <span>Header 6</span>The Life of Light Bootstrap Dashboard </h6>
-                                    </div>
-                                    <div class="typography-line">
-                                        <p>
-                                            <span>Paragraph</span>
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
-                                        </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Quote</span>
-                                        <blockquote>
-                                            <p class="blockquote blockquote-primary">
-                                                "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
-                                                <br>
-                                                <br>
-                                                <small>
-                                                    - Noaa
-                                                </small>
-                                            </p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Muted Text</span>
-                                        <p class="text-muted">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                                        </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Primary Text</span>
-                                        <p class="text-primary">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...</p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Info Text</span>
-                                        <p class="text-info">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Success Text</span>
-                                        <p class="text-success">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Warning Text</span>
-                                        <p class="text-warning">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                                        </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Danger Text</span>
-                                        <p class="text-danger">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h2>
-                                            <span>Small Tag</span>
-                                            Header with small subtitle
-                                            <br>
-                                            <small>Use "small" tag for the headers</small>
-                                        </h2>
+                                    <!-- <div id="chartHours" class="ct-chart"></div> -->
+                            
+                                     <p>fetch number</p>
+                                </div>
+                                <div class="card-footer ">
+                                    <!-- <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Click
+                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                    </div> -->
+                                    <hr>
+                                    <!-- <div class="stats">
+                                        <i class="fa fa-history"></i> Updated 3 minutes ago
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card ">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Number of Bookeed Rooms</h4>
+                                    <p class="card-category">All products including Taxes</p>
+                                </div>
+                                <!-- <div class="card-body ">
+                                    <div id="chartActivity" class="ct-chart"></div>
+                                </div> -->
+                                <div class="card-footer ">
+                                    <!-- <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Tesla Model S
+                                        <i class="fa fa-circle text-danger"></i> BMW 5 Series
+                                    </div> -->
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-check"></i> Data information certified
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -398,5 +310,14 @@
 <script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+        demo.showNotification();
+
+    });
+</script>
 
 </html>
