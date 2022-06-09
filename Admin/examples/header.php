@@ -49,9 +49,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./notifications.php">
+                        <a class="nav-link" href="./inquiry.php">
                             <i class="nc-icon nc-bell-55"></i>
-                            <p>Notifications</p>
+                            <p>Inquiry List</p>
                         </a>
                     </li>
                     <li class="nav-item active active-pro">
