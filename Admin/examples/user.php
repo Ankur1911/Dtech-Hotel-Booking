@@ -1,17 +1,4 @@
-<!--
-=========================================================
- Light Bootstrap Dashboard - v2.0.1
-=========================================================
 
- Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
-
- Coded by Creative Tim
-
-=========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +20,7 @@
 </head>
 
 <body>
+
     <div class="wrapper">
        <?php include('header.php')?>
         <div class="main-panel">
@@ -104,28 +92,32 @@
                                             
                                             <div class="col-md-3 px-1" style="margin-left: 10px; margin-right: 10px;">
                                                 <div class="form-group">
-                                                    <label>Username</label>
-                                                    <input type="text" class="form-control" placeholder="Username" value="michael23">
+                                                    <label>Username</label><br>
+                                                    ak
+                                                    <!-- <input type="text" class="form-control" placeholder="Username" value="michael23"> -->
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" placeholder="Email">
+                                                    <label for="exampleInputEmail1">Email address</label><br>
+                                                    aa@123
+                                                    <!-- <input type="email" class="form-control" placeholder="Email"> -->
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 pr-1">
                                                 <div class="form-group">
-                                                    <label>First Name</label>
-                                                    <input type="text" class="form-control" placeholder="Company" value="Mike">
+                                                    <label>First Name</label><br>
+                                                    sdc
+                                                    <!-- <input type="text" class="form-control" placeholder="Company" value="Mike"> -->
                                                 </div>
                                             </div>
                                             <div class="col-md-6 pl-1">
                                                 <div class="form-group">
-                                                    <label>Last Name</label>
-                                                    <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
+                                                    <label>Last Name</label><br>
+                                                    rvsd
+                                                    <!-- <input type="text" class="form-control" placeholder="Last Name" value="Andrew"> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -133,8 +125,9 @@
                                         <div class="row">
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
-                                                    <label>City</label>
-                                                    <input type="text" class="form-control" placeholder="City" value="Mike">
+                                                    <label>City</label><br>
+                                                    rfds
+                                                    <!-- <input type="text" class="form-control" placeholder="City" value="Mike"> -->
                                                 </div>
                                             </div>
                                             
@@ -142,12 +135,13 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label>About Me</label>
-                                                    <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                                                    <label>About Me</label><br>
+                                                    esdbbhburbdscjhjbb
+                                                    <!-- <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea> -->
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                        <!-- <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button> -->
                                         <div class="clearfix"></div>
                                     </form>
                                 </div>
