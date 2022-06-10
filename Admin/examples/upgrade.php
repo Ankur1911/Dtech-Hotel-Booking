@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
 <<<<<<< HEAD
-   <!-- .wrapper{
+    .wrapper{
   width: 480px;
 =======
 <style>
@@ -177,7 +177,7 @@ form.btn-circle.btn-sm {
 
             margin: 20px;
         }
-</style> -->
+</style> 
 </head>
 
 
