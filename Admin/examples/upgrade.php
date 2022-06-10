@@ -1,18 +1,33 @@
-<!--
-=========================================================
- Light Bootstrap Dashboard - v2.0.1
-=========================================================
+<?php
 
- Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include 'dbconn.php';
 
- Coded by Creative Tim
+    $uname = $_POST["username"];
+    $password = $_POST["password"];
+    $repassword = $_POST["repassword"];
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+    $email = $_POST["email"];
+    $city = $_POST["city"];
+    $about = $_POST["about"];
+    
+  
 
-=========================================================
+    if($password==$repassword){
+      $sql = "INSERT INTO `admin` (`username`, `password`, `first_name`, `last_name`, `email`, `city`, `about`) VALUES ('$uname', '$password', '$fname', '$lname', '$email', '$city', '$about');";
+      $result = mysqli_query($conn, $sql);
+      echo'
+      <div class="alert alert-primary" role="alert">
+      Admin added successfully...!!!
+    </div>';
+    }
+  }
 
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
-<!DOCTYPE html>
+?>
+
+
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,13 +45,16 @@
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
+<style>
     .wrapper{
-  width: 480px;
+  width: 1200px;
+  height: 900px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
-.wrapper .title{
+
+.wrapper1 .title{
   font-size: 35px;
   font-weight: 600;
   text-align: center;
@@ -46,17 +64,17 @@
   border-radius: 15px 15px 0 0;
   background: red;
 }
-.wrapper form{
+.wrapper1 form{
   padding: 10px 30px 50px 30px;
 }
-.wrapper form .field{
+.wrapper1 form .field{
   height: 50px;
   width: 100%;
   margin-top: 20px;
   position: relative;
 
 }
-.wrapper form .field input{
+.wrapper1 form .field input{
   height: 100%;
   width: 100%;
   outline: none;
@@ -66,11 +84,11 @@
   border-radius: 25px;
   transition: all 0.3s ease;
 }
-.wrapper form .field input:focus,
+.wrapper1 form .field input:focus,
 form .field input:valid{
   border-color: #4158d0;
 }
-.wrapper form .field label{
+.wrapper1 form .field label{
   position: absolute;
   top: 50%;
   left: 20px;
@@ -179,20 +197,7 @@ form.btn-circle.btn-sm {
                                     <span class="d-lg-none">Dashboard</span>
                                 </a>
                             </li>
-                            <li class="dropdown nav-item">
-                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <i class="nc-icon nc-planet"></i>
-                                    <span class="notification">5</span>
-                                    <span class="d-lg-none">Notification</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Notification 1</a>
-                                    <a class="dropdown-item" href="#">Notification 2</a>
-                                    <a class="dropdown-item" href="#">Notification 3</a>
-                                    <a class="dropdown-item" href="#">Notification 4</a>
-                                    <a class="dropdown-item" href="#">Another notification</a>
-                                </ul>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nc-icon nc-zoom-split"></i>
@@ -305,41 +310,47 @@ form.btn-circle.btn-sm {
                     </div>
                 </div>
                 -->
-                <div class="wrapper">
-         <div class="title">
+
+
+    <div class="wrapper1">
+                <div class="title">
           <!-- <img src="https://99designs-acquisition-frontend.imgix.net/serverless/images/categoryPage/hero/logo-design/04-artsigma.jpg" height="100px" width="100px"> -->
-            Sign Up Page
+            Add New Admin Details
 
          </div>
 
-         <form action="#">
+         <form action="upgrade.php" method="POST">
            <div class="field">
-              <input type="text" required>
+              <input type="text" name="username" required>
               <label>Username</label>
            </div>
            <div class="field">
-              <input type="password" required>
+              <input type="password" name="password" required>
               <label>Password</label>
            </div>
            <div class="field">
-              <input type="text" required>
+              <input type="password" name="repassword" required>
+              <label>Re-Password</label>
+           </div>
+           <div class="field">
+              <input type="text" name="fname" required>
               <label>First Name</label>
            </div>
            <div class="field">
-              <input type="text" required>
+              <input type="text" name="lname" required>
               <label>Last Name</label>
            </div>
            <div class="field">
-              <input type="text" required>
+              <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
               <label>Email Address</label>
            </div>
 
            <div class="field">
-              <input type="tel" required>
+              <input type="tel" name="city" required>
               <label>City</label>
            </div>
            <div class="field">
-              <input type="text" required>
+              <input type="text" name="about" required>
               <label>About</label>
            </div>
 
@@ -357,16 +368,14 @@ form.btn-circle.btn-sm {
                </div>
             </div> -->
             <div class="field">
-               <input type="submit" value="Create Account">
+               <input type="submit" value="Add Admin">
             </div>
-            </div>
-        </div>
-
     </div>
+    
+
+</div>
 </div>
 
-                        </div>
-                    </div>
 
 
 

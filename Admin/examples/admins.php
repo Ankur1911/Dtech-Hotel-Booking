@@ -91,12 +91,19 @@
             </nav>
 
 
-<div>
-    <p style="float:left; margin-right:20px;">Count</p>
-    <p style="float:left;margin-left: 35px;">First_name</p>
-    <p style="float:left;margin-left: 120px;">Last_name</p>
-    <p style="float:left; margin-left: 200px;">Email</p>
-</div>             
+
+<style>
+    td {
+        padding: 10px 77px;
+      }
+      th{
+          padding:0 75px;
+        
+      }
+      table, th, td {
+    border: 1px solid black;
+}
+    </style>
             <!-- End Navbar -->
 <?php
 
@@ -106,28 +113,16 @@ $sql="select * from admin";
 $result = mysqli_query($conn, $sql); 
 // $rec = mysqli_fetch_assoc($result);
 $counter=1;
-while($rec = mysqli_fetch_assoc($result)){
-
-
     
-    $fname=$rec['first_name'];
-    $lname=$rec['last_name'];
-    $email=$rec['email'];
-    
-    
-    echo '<table class="table">
-    
-    <tbody>
-      <tr>
-        <th>'.$counter.'</th>
-        <td>'.$fname.'</td>
-        <td>'.$lname.'</td>
-        <td>'.$email.'</td>
-      </tr>
-
-  </table>';
-  $counter++;
-}
+echo "<table><tr><th>Count</th><th>First Name</th><th>Last Name</th><th>Email-Id</th></tr>";
+    // output data of each row
+    while($rec = mysqli_fetch_assoc($result)){
+        echo "<tr><th>" . $counter. "</th><td>" . $rec["first_name"]. "</td><td> " . $rec["last_name"]. "</td><td> " . $rec["email"]. "</td></tr>";
+        $counter++;
+    }
+    echo "</table>";
+  
+// }
 ?>
 
 
