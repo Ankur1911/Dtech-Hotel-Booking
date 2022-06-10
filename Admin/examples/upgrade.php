@@ -30,7 +30,7 @@
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
-    .wrapper{
+   <!-- .wrapper{
   width: 480px;
   background: #fff;
   border-radius: 20px;
@@ -154,7 +154,7 @@ form.btn-circle.btn-sm {
 
             margin: 20px;
         }
-</style>
+</style> -->
 </head>
 
 
