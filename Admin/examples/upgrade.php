@@ -12,18 +12,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $city = $_POST["city"];
     $about = $_POST["about"];
     
-  
+    $sql = "select * from admin where username='$uname'";
+    $result1 = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result1);
 
-    if($password==$repassword){
-      $sql = "INSERT INTO `admin` (`username`, `password`, `first_name`, `last_name`, `email`, `city`, `about`) VALUES ('$uname', '$password', '$fname', '$lname', '$email', '$city', '$about');";
-      $result = mysqli_query($conn, $sql);
-      echo'
-      <div class="alert alert-primary" role="alert">
-      Admin added successfully...!!!
-    </div>';
+    if($num!=0)
+    {
+        echo'
+        <div class="alert alert-primary" role="alert">
+        username should be unique...!!!
+      </div>';
     }
-  }
-
+    else{
+       if($password==$repassword){
+        $sql = "INSERT INTO `admin` (`username`, `password`, `first_name`, `last_name`, `email`, `city`, `about`) VALUES ('$uname', '$password', '$fname', '$lname', '$email', '$city', '$about');";
+        $result = mysqli_query($conn, $sql);
+        echo'
+         <div class="alert alert-primary" role="alert">
+         Admin added successfully...!!!
+         </div>';
+        }
+        else{
+        echo'
+        <div class="alert alert-primary" role="alert">
+         Password and Re-password should be same...!!!
+         </div>';
+         }
+    } 
+}
 ?>
 
 
@@ -183,7 +199,7 @@ form.btn-circle.btn-sm {
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Upgrade </a>
+                    <a class="navbar-brand" href="#pablo"> Add Admin </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -198,12 +214,12 @@ form.btn-circle.btn-sm {
                                 </a>
                             </li>
                             
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nc-icon nc-zoom-split"></i>
                                     <span class="d-lg-block">&nbsp;Search</span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
@@ -225,7 +241,7 @@ form.btn-circle.btn-sm {
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="login.php">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>

@@ -1,3 +1,15 @@
+<?php
+
+    include 'dbconn.php';
+    session_start();
+    $username=$_SESSION['eusername'];
+
+    $sql = "SELECT * FROM `admin` WHERE username= '$username'";
+    $result = mysqli_query($conn, $sql);
+	$rec = mysqli_fetch_assoc($result);
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +81,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="login.php">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
@@ -84,7 +96,7 @@
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Edit Profile</h4>
+                                    <h4 class="card-title">Profile</h4>
                                 </div>
                                 <div class="card-body">
                                     <form>
@@ -93,14 +105,18 @@
                                             <div class="col-md-3 px-1" style="margin-left: 10px; margin-right: 10px;">
                                                 <div class="form-group">
                                                     <label>Username</label><br>
-                                                    ak
+                                                   <?php
+                                                   echo $rec['username'];
+                                                   ?>
                                                     <!-- <input type="text" class="form-control" placeholder="Username" value="michael23"> -->
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Email address</label><br>
-                                                    aa@123
+                                                    <?php
+                                                   echo $rec['email'];
+                                                   ?>
                                                     <!-- <input type="email" class="form-control" placeholder="Email"> -->
                                                 </div>
                                             </div>
@@ -109,14 +125,18 @@
                                             <div class="col-md-6 pr-1">
                                                 <div class="form-group">
                                                     <label>First Name</label><br>
-                                                    sdc
+                                                    <?php
+                                                   echo $rec['first_name'];
+                                                   ?>
                                                     <!-- <input type="text" class="form-control" placeholder="Company" value="Mike"> -->
                                                 </div>
                                             </div>
                                             <div class="col-md-6 pl-1">
                                                 <div class="form-group">
                                                     <label>Last Name</label><br>
-                                                    rvsd
+                                                    <?php
+                                                   echo $rec['last_name'];
+                                                   ?>
                                                     <!-- <input type="text" class="form-control" placeholder="Last Name" value="Andrew"> -->
                                                 </div>
                                             </div>
@@ -126,7 +146,9 @@
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>City</label><br>
-                                                    rfds
+                                                    <?php
+                                                   echo $rec['city'];
+                                                   ?>
                                                     <!-- <input type="text" class="form-control" placeholder="City" value="Mike"> -->
                                                 </div>
                                             </div>
@@ -136,7 +158,9 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>About Me</label><br>
-                                                    esdbbhburbdscjhjbb
+                                                    <?php
+                                                   echo $rec['about'];
+                                                   ?>
                                                     <!-- <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea> -->
                                                 </div>
                                             </div>
@@ -156,14 +180,19 @@
                                     <div class="author">
                                         <a href="#">
                                             <img class="avatar border-gray" src="../images/admin-logo.jpg" alt="...">
-                                            <h5 class="title">fname lname</h5>
+                                            <h5 class="title"><?php
+                                                   echo $rec['first_name']." ".$rec['last_name'];
+                                                   ?></h5>
                                         </a>
                                         
                                     </div>
                                     <p class="description text-center">
-                                        "Lamborghini Mercy
-                                        <br> Your chick she so thirsty
-                                        <br> I'm in that two seat Lambo"
+                                        
+                                    <?php
+                                        echo '"';
+                                        echo $rec['about'];
+                                        echo '"';
+                                        ?>
                                     </p>
                                 </div>
                                 <hr>
