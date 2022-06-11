@@ -61,10 +61,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
+<<<<<<< HEAD
+    .wrapper{
+  width: 480px;
+=======
 <style>
     .wrapper{
   width: 1200px;
   height: 900px;
+>>>>>>> 03368fff386d9507b64189417cd0e82f72279df6
   background: #fff;
   border-radius: 20px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
@@ -188,7 +193,7 @@ form.btn-circle.btn-sm {
 
             margin: 20px;
         }
-</style>
+</style> 
 </head>
 
 
