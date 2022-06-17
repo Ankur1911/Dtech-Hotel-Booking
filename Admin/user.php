@@ -1,19 +1,17 @@
-<!-- 
-=========================================================
- Light Bootstrap Dashboard - v2.0.1
-=========================================================
+<?php
 
- Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
+    include 'dbconn.php';
+    session_start();
+    $username=$_SESSION['eusername'];
 
- Coded by Creative Tim
+    $sql = "SELECT * FROM `admin` WHERE username= '$username'";
+    $result = mysqli_query($conn, $sql);
+	$rec = mysqli_fetch_assoc($result);
 
-=========================================================
+?>
 
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
+
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -21,7 +19,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
+    <title>Book My Space</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -34,13 +32,14 @@
 </head>
 
 <body>
+
     <div class="wrapper">
        <?php include('header.php')?>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Dashboard </a>
+                    <a class="navbar-brand" href="#pablo"> User </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -54,20 +53,7 @@
                                     <span class="d-lg-none">Dashboard</span>
                                 </a>
                             </li>
-                            <!-- <li class="dropdown nav-item">
-                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <i class="nc-icon nc-planet"></i>
-                                    <span class="notification">5</span>
-                                    <span class="d-lg-none">Notification</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Notification 1</a>
-                                    <a class="dropdown-item" href="#">Notification 2</a>
-                                    <a class="dropdown-item" href="#">Notification 3</a>
-                                    <a class="dropdown-item" href="#">Notification 4</a>
-                                    <a class="dropdown-item" href="#">Another notification</a>
-                                </ul>
-                            </li> -->
+                            
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nc-icon nc-zoom-split"></i>
@@ -95,7 +81,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="login.php">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
@@ -107,73 +93,122 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="card " style="width:300px ;">
-                                <div class="card-header ">
-                                    <h4 class="card-title">Number of users loged-in</h4>
-                                    <!-- style="background-color:#b4f3ff; border-radius:4px;" -->
-                                    <!-- <p class="card-category">Last Campaign Performance</p> -->
-                                </div>
-                                <div class="card-body ">
-
-                                    <p>fetch number</p>
-                                     <!-- <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div> -->
-                                    <div class="legend">
-
-                                    </div> 
-                                       <hr>
-                                    
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md-8">
-                            <div class="card ">
-                                <div class="card-header ">
-                                    <h4 class="card-title">Number of Hotels/Wills Registered</h4>
-                                    <p class="card-category">24 Hours performance</p>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Profile</h4>
                                 </div>
                                 <div class="card-body">
-                                    <!-- <div id="chartHours" class="ct-chart"></div> -->
-                            
-                                     <p>fetch number</p>
-                                </div>
-                                <div class="card-footer ">
-                                    <!-- <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Click
-                                        <i class="fa fa-circle text-warning"></i> Click Second Time
-                                    </div> -->
-                                    <hr>
-                                    <!-- <div class="stats">
-                                        <i class="fa fa-history"></i> Updated 3 minutes ago
-                                    </div> -->
+                                    <form>
+                                        <div class="row">
+                                            
+                                            <div class="col-md-3 px-1" style="margin-left: 10px; margin-right: 10px;">
+                                                <div class="form-group">
+                                                    <label>Username</label><br>
+                                                   <?php
+                                                   echo $rec['username'];
+                                                   ?>
+                                                    <!-- <input type="text" class="form-control" placeholder="Username" value="michael23"> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 pl-1">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Email address</label><br>
+                                                    <?php
+                                                   echo $rec['email'];
+                                                   ?>
+                                                    <!-- <input type="email" class="form-control" placeholder="Email"> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+                                                    <label>First Name</label><br>
+                                                    <?php
+                                                   echo $rec['first_name'];
+                                                   ?>
+                                                    <!-- <input type="text" class="form-control" placeholder="Company" value="Mike"> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <div class="form-group">
+                                                    <label>Last Name</label><br>
+                                                    <?php
+                                                   echo $rec['last_name'];
+                                                   ?>
+                                                    <!-- <input type="text" class="form-control" placeholder="Last Name" value="Andrew"> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4 pr-1">
+                                                <div class="form-group">
+                                                    <label>City</label><br>
+                                                    <?php
+                                                   echo $rec['city'];
+                                                   ?>
+                                                    <!-- <input type="text" class="form-control" placeholder="City" value="Mike"> -->
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>About Me</label><br>
+                                                    <?php
+                                                   echo $rec['about'];
+                                                   ?>
+                                                    <!-- <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button> -->
+                                        <div class="clearfix"></div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card ">
-                                <div class="card-header ">
-                                    <h4 class="card-title">Number of Bookeed Rooms</h4>
-                                    <p class="card-category">All products including Taxes</p>
+                        <div class="col-md-4">
+                            <div class="card card-user">
+                                <div class="card-image">
+                                    <img src="../images/admin-bg.jpg" alt="...">
                                 </div>
-                                <!-- <div class="card-body ">
-                                    <div id="chartActivity" class="ct-chart"></div>
-                                </div> -->
-                                <div class="card-footer ">
-                                    <!-- <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-danger"></i> BMW 5 Series
-                                    </div> -->
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-check"></i> Data information certified
+                                <div class="card-body">
+                                    <div class="author">
+                                        <a href="#">
+                                            <img class="avatar border-gray" src="../images/admin-logo.jpg" alt="...">
+                                            <h5 class="title"><?php
+                                                   echo $rec['first_name']." ".$rec['last_name'];
+                                                   ?></h5>
+                                        </a>
+                                        
                                     </div>
+                                    <p class="description text-center">
+                                        
+                                    <?php
+                                        echo '"';
+                                        echo $rec['about'];
+                                        echo '"';
+                                        ?>
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="button-container mr-auto ml-auto">
+                                    <button href="#" class="btn btn-simple btn-link btn-icon">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </button>
+                                    <button href="#" class="btn btn-simple btn-link btn-icon">
+                                        <i class="fa fa-twitter"></i>
+                                    </button>
+                                    <button href="#" class="btn btn-simple btn-link btn-icon">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -310,14 +345,5 @@
 <script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-
-        demo.showNotification();
-
-    });
-</script>
 
 </html>

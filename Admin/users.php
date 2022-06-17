@@ -1,4 +1,17 @@
+<!--
+=========================================================
+ Light Bootstrap Dashboard - v2.0.1
+=========================================================
 
+ Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
+
+ Coded by Creative Tim
+
+=========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +20,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
+    <title>Book My Space</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -20,14 +33,13 @@
 </head>
 
 <body>
-
     <div class="wrapper">
        <?php include('header.php')?>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> User </a>
+                    <a class="navbar-brand" href="#pablo"> Table List </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -69,7 +81,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="login.php">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
@@ -81,102 +93,129 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-8">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Edit Profile</h4>
+                        <div class="col-md-12">
+                            <div class="card strpied-tabled-with-hover">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Striped Table with Hover</h4>
+                                    <p class="card-category">Here is a subtitle for this table</p>
                                 </div>
-                                <div class="card-body">
-                                    <form>
-                                        <div class="row">
-                                            
-                                            <div class="col-md-3 px-1" style="margin-left: 10px; margin-right: 10px;">
-                                                <div class="form-group">
-                                                    <label>Username</label><br>
-                                                    ak
-                                                    <!-- <input type="text" class="form-control" placeholder="Username" value="michael23"> -->
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 pl-1">
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email address</label><br>
-                                                    aa@123
-                                                    <!-- <input type="email" class="form-control" placeholder="Email"> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 pr-1">
-                                                <div class="form-group">
-                                                    <label>First Name</label><br>
-                                                    sdc
-                                                    <!-- <input type="text" class="form-control" placeholder="Company" value="Mike"> -->
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 pl-1">
-                                                <div class="form-group">
-                                                    <label>Last Name</label><br>
-                                                    rvsd
-                                                    <!-- <input type="text" class="form-control" placeholder="Last Name" value="Andrew"> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row">
-                                            <div class="col-md-4 pr-1">
-                                                <div class="form-group">
-                                                    <label>City</label><br>
-                                                    rfds
-                                                    <!-- <input type="text" class="form-control" placeholder="City" value="Mike"> -->
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label>About Me</label><br>
-                                                    esdbbhburbdscjhjbb
-                                                    <!-- <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button> -->
-                                        <div class="clearfix"></div>
-                                    </form>
+                                <div class="card-body table-full-width table-responsive">
+                                    <table class="table table-hover table-striped">
+                                        <thead>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Salary</th>
+                                            <th>Country</th>
+                                            <th>City</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Dakota Rice</td>
+                                                <td>$36,738</td>
+                                                <td>Niger</td>
+                                                <td>Oud-Turnhout</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Minerva Hooper</td>
+                                                <td>$23,789</td>
+                                                <td>Curaçao</td>
+                                                <td>Sinaai-Waas</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Sage Rodriguez</td>
+                                                <td>$56,142</td>
+                                                <td>Netherlands</td>
+                                                <td>Baileux</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Philip Chaney</td>
+                                                <td>$38,735</td>
+                                                <td>Korea, South</td>
+                                                <td>Overland Park</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Doris Greene</td>
+                                                <td>$63,542</td>
+                                                <td>Malawi</td>
+                                                <td>Feldkirchen in Kärnten</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Mason Porter</td>
+                                                <td>$78,615</td>
+                                                <td>Chile</td>
+                                                <td>Gloucester</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card card-user">
-                                <div class="card-image">
-                                    <img src="../images/admin-bg.jpg" alt="...">
+                        <div class="col-md-12">
+                            <div class="card card-plain table-plain-bg">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Table on Plain Background</h4>
+                                    <p class="card-category">Here is a subtitle for this table</p>
                                 </div>
-                                <div class="card-body">
-                                    <div class="author">
-                                        <a href="#">
-                                            <img class="avatar border-gray" src="../images/admin-logo.jpg" alt="...">
-                                            <h5 class="title">fname lname</h5>
-                                        </a>
-                                        
-                                    </div>
-                                    <p class="description text-center">
-                                        "Lamborghini Mercy
-                                        <br> Your chick she so thirsty
-                                        <br> I'm in that two seat Lambo"
-                                    </p>
-                                </div>
-                                <hr>
-                                <div class="button-container mr-auto ml-auto">
-                                    <button href="#" class="btn btn-simple btn-link btn-icon">
-                                        <i class="fa fa-facebook-square"></i>
-                                    </button>
-                                    <button href="#" class="btn btn-simple btn-link btn-icon">
-                                        <i class="fa fa-twitter"></i>
-                                    </button>
-                                    <button href="#" class="btn btn-simple btn-link btn-icon">
-                                        <i class="fa fa-google-plus-square"></i>
-                                    </button>
+                                <div class="card-body table-full-width table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Salary</th>
+                                            <th>Country</th>
+                                            <th>City</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Dakota Rice</td>
+                                                <td>$36,738</td>
+                                                <td>Niger</td>
+                                                <td>Oud-Turnhout</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Minerva Hooper</td>
+                                                <td>$23,789</td>
+                                                <td>Curaçao</td>
+                                                <td>Sinaai-Waas</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Sage Rodriguez</td>
+                                                <td>$56,142</td>
+                                                <td>Netherlands</td>
+                                                <td>Baileux</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Philip Chaney</td>
+                                                <td>$38,735</td>
+                                                <td>Korea, South</td>
+                                                <td>Overland Park</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Doris Greene</td>
+                                                <td>$63,542</td>
+                                                <td>Malawi</td>
+                                                <td>Feldkirchen in Kärnten</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Mason Porter</td>
+                                                <td>$78,615</td>
+                                                <td>Chile</td>
+                                                <td>Gloucester</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

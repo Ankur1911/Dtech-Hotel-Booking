@@ -12,18 +12,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $city = $_POST["city"];
     $about = $_POST["about"];
     
-  
+    $sql = "select * from admin where username='$uname'";
+    $result1 = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result1);
 
-    if($password==$repassword){
-      $sql = "INSERT INTO `admin` (`username`, `password`, `first_name`, `last_name`, `email`, `city`, `about`) VALUES ('$uname', '$password', '$fname', '$lname', '$email', '$city', '$about');";
-      $result = mysqli_query($conn, $sql);
-      echo'
-      <div class="alert alert-primary" role="alert">
-      Admin added successfully...!!!
-    </div>';
+    if($num!=0)
+    {
+        echo'
+        <div class="alert alert-primary" role="alert">
+        username should be unique...!!!
+      </div>';
     }
-  }
-
+    else{
+       if($password==$repassword){
+        $sql = "INSERT INTO `admin` (`username`, `password`, `first_name`, `last_name`, `email`, `city`, `about`) VALUES ('$uname', '$password', '$fname', '$lname', '$email', '$city', '$about');";
+        $result = mysqli_query($conn, $sql);
+        echo'
+         <div class="alert alert-primary" role="alert">
+         Admin added successfully...!!!
+         </div>';
+        }
+        else{
+        echo'
+        <div class="alert alert-primary" role="alert">
+         Password and Re-password should be same...!!!
+         </div>';
+         }
+    } 
+}
 ?>
 
 
@@ -35,8 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <title>Book My Space</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -45,16 +61,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
+<<<<<<< HEAD:Admin/examples/upgrade.php
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
- <!--   .wrapper{
-  width: 480px;  >>>>>>> 03368fff386d9507b64189417cd0e82f72279df6
-======= -->
+<<<<<<< HEAD
+    .wrapper{
+  width: 480px;
+=======
+=======
+
+>>>>>>> a28d74553f75648ceaa7c5bc76bd2a696ae7a6b1:Admin/upgrade.php
 <style>
     .wrapper{
   width: 1200px;
   height: 900px;
-
   background: #fff;
   border-radius: 20px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
@@ -189,7 +208,7 @@ form.btn-circle.btn-sm {
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Upgrade </a>
+                    <a class="navbar-brand" href="#pablo"> Add Admin </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -204,12 +223,12 @@ form.btn-circle.btn-sm {
                                 </a>
                             </li>
                             
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nc-icon nc-zoom-split"></i>
                                     <span class="d-lg-block">&nbsp;Search</span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
@@ -231,7 +250,7 @@ form.btn-circle.btn-sm {
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="login.php">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>

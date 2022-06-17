@@ -7,9 +7,7 @@
     -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text">
-                        Creative Tim
-                    </a>
+                    <img src="../images/logo1.png" alt="logo" style="height:100px; width: 200px; padding-left: 1px;">
                 </div>
                 <ul class="nav">
                     <li>
