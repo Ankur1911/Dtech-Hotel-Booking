@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'dbconn.php';
+    include 'includes/dbconn.php';
 
     $uname = $_POST["username"];
     $password = $_POST["password"];
@@ -61,31 +61,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
-<<<<<<< HEAD
-<<<<<<< HEAD:Admin/examples/upgrade.php
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
+
+    <style>
     .wrapper{
   width: 480px;
-=======
-=======
-
->>>>>>> a28d74553f75648ceaa7c5bc76bd2a696ae7a6b1:Admin/upgrade.php
-=======
+    }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
- <!--   .wrapper{
-  width: 480px;  >>>>>>> 03368fff386d9507b64189417cd0e82f72279df6
-======= -->
->>>>>>> ae1d2194efe5c6d555644056c2daf075146ca9ca
+ 
 <style>
     .wrapper{
   width: 1200px;
   height: 900px;
-<<<<<<< HEAD
-=======
-
->>>>>>> ae1d2194efe5c6d555644056c2daf075146ca9ca
   background: #fff;
   border-radius: 20px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
@@ -215,16 +203,12 @@ form.btn-circle.btn-sm {
 
 <body>
     <div class="wrapper">
-        <?php include('header.php')?>
+        <?php include('includes/header.php')?>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-<<<<<<< HEAD
                     <a class="navbar-brand" href="#pablo"> Add Admin </a>
-=======
-                    <a class="navbar-brand" href="#pablo"> Upgrade </a>
->>>>>>> ae1d2194efe5c6d555644056c2daf075146ca9ca
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -232,30 +216,22 @@ form.btn-circle.btn-sm {
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="nav navbar-nav mr-auto">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a href="#" class="nav-link" data-toggle="dropdown">
                                     <i class="nc-icon nc-palette"></i>
                                     <span class="d-lg-none">Dashboard</span>
                                 </a>
-                            </li>
+                            </li> -->
                             
-<<<<<<< HEAD
                             <!-- <li class="nav-item">
-=======
-                            <li class="nav-item">
->>>>>>> ae1d2194efe5c6d555644056c2daf075146ca9ca
                                 <a href="#" class="nav-link">
                                     <i class="nc-icon nc-zoom-split"></i>
                                     <span class="d-lg-block">&nbsp;Search</span>
                                 </a>
-<<<<<<< HEAD
                             </li> -->
-=======
-                            </li>
->>>>>>> ae1d2194efe5c6d555644056c2daf075146ca9ca
                         </ul>
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
                                     <span class="no-icon">Account</span>
                                 </a>
@@ -272,13 +248,9 @@ form.btn-circle.btn-sm {
                                     <div class="divider"></div>
                                     <a class="dropdown-item" href="#">Separated link</a>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
-<<<<<<< HEAD
                                 <a class="nav-link" href="login.php">
-=======
-                                <a class="nav-link" href="#pablo">
->>>>>>> ae1d2194efe5c6d555644056c2daf075146ca9ca
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>

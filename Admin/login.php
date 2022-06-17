@@ -1,7 +1,7 @@
 <?php
 session_abort();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'dbconn.php';
+    include 'php/includes/dbconn.php';
 
     $username = $_POST["uname"];
     
